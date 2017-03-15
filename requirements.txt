@@ -1,3 +1,6 @@
+django==1.9.7
 Mezzanine==4.1.0
-jango-cloud-browser==0.2.2
+django-cloud-browser==0.3.0
 django-treenav==0.9.0
+gunicorn==19.7.1
+psycopg2==2.6.1

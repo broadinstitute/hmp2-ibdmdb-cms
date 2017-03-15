@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block main %}
+{% if user.is_authenticated %}
+<p>
+Welcome to the ibdmdb site.  You are free to comment
+and create blog entries.
+</p>
+
+{% else %}
+<p>
+To access the blogs and place comments, please login.
+</p>
+
+{% endif %}
+
+{% endblock %}
+
