@@ -1,0 +1,3 @@
+Mezzanine==4.1.0
+jango-cloud-browser==0.2.2
+django-treenav==0.9.0

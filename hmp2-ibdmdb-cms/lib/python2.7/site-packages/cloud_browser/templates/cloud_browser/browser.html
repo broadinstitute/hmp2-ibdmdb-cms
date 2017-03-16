@@ -1,0 +1,28 @@
+{% extends "cloud_browser/base.html" %}
+
+{% comment %}
+###############################################################################
+# Browser Snippet
+###############################################################################
+{% endcomment %}
+
+{% load cloud_browser_extras %}
+
+{% block title %}
+Cloud Browser - {{ path }}
+{% endblock %}
+
+{% block cloud_browser_breadcrumbs %}
+    {% include "cloud_browser/_breadcrumbs.html" %}
+{% endblock %}
+
+{% block cloud_browser_template_head %}
+<link rel="stylesheet" type="text/css"
+    href="{% cloud_browser_media_url 'css/cloud-browser.css' %}" />
+<script type="text/javascript"
+    src="{% cloud_browser_media_url 'js/browser.js' %}"></script>
+{% endblock %}
+
+{% block cloud_browser_content %}
+    {% include "cloud_browser/_browser.html" %}
+{% endblock %}
