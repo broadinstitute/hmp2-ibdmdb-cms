@@ -1,0 +1,9 @@
+## Standard python ignores + some Mezzanine files
+*.pyc
+*.pyo
+*.db
+.DS_Store
+.coverage
+local_settings.py
+venv
+.env
