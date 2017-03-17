@@ -1,8 +1,8 @@
 NAME="hmp2"                                                   # Name of the application
 DJANGODIR=/local/ibdmdb/mezzanine_new                         # Django project directory
 SOCKFILE=/local/ibdmdb/var/run/gunicorn.sock                  # we will communicte using this unix socket
-USER=ibdmdb                                                   # the user to run as
-GROUP=broad                                                   # the group to run as
+USER=broad-user                                               # the user to run as
+GROUP=broad-user                                              # the group to run as
 NUM_WORKERS=2                                                 # how many worker processes should Gunicorn spawn
 DJANGO_SETTINGS_MODULE=hmp2.settings                          # which settings file should Django use
 DJANGO_WSGI_MODULE=hmp2.wsgi                                  # WSGI module name
