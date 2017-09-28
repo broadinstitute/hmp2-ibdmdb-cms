@@ -1,0 +1,30 @@
+/*
+ *  IBDMDB CSS
+ */
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 72px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.faq_img {
+    max-width: 85%;
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid;
+}

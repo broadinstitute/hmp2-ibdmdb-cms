@@ -77,6 +77,8 @@ urlpatterns += [
     # WILL NEVER BE MATCHED!
     url(r'^protocols', RedirectView.as_view(url='/cb/browser/')),
 
+    url(r'^support', direct_to_template, {"template": "hmp2/support.html"}, name="support"),
+
     # If you'd like more granular control over the patterns in
     # ``mezzanine.urls``, go right ahead and take the parts you want
     # from it, and use them directly below instead of using
