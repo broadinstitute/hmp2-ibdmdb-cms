@@ -38,35 +38,8 @@ urlpatterns += [
     # commented out like the others, so it's the default. You only need
     # one homepage pattern, so if you use a different one, comment this
     # one out.
-
     url("^$", direct_to_template, {"template": "hmp2/index.html"}, name="home"),
 
-    # HOMEPAGE AS AN EDITABLE PAGE IN THE PAGE TREE
-    # ---------------------------------------------
-    # This pattern gives us a normal ``Page`` object, so that your
-    # homepage can be managed via the page tree in the admin. If you
-    # use this pattern, you'll need to create a page in the page tree,
-    # and specify its URL (in the Meta Data section) as "/", which
-    # is the value used below in the ``{"slug": "/"}`` part.
-    # Also note that the normal rule of adding a custom
-    # template per page with the template name using the page's slug
-    # doesn't apply here, since we can't have a template called
-    # "/.html" - so for this case, the template "pages/index.html"
-    # should be used if you want to customize the homepage's template.
-    # NOTE: Don't forget to import the view function too!
-
-    # url("^$", mezzanine.pages.views.page, {"slug": "/"}, name="home"),
-
-    # HOMEPAGE FOR A BLOG-ONLY SITE
-    # -----------------------------
-    # This pattern points the homepage to the blog post listing page,
-    # and is useful for sites that are primarily blogs. If you use this
-    # pattern, you'll also need to set BLOG_SLUG = "" in your
-    # ``settings.py`` module, and delete the blog page object from the
-    # page tree in the admin if it was installed.
-    # NOTE: Don't forget to import the view function too!
-
-    # url("^$", mezzanine.blog.views.blog_post_list, name="home"),
     url(r'^cb/', include('cloud_browser.urls')),
 
     # MEZZANINE'S URLS
@@ -76,6 +49,8 @@ urlpatterns += [
     # FOR PAGES, SO URLPATTERNS ADDED BELOW ``mezzanine.urls``
     # WILL NEVER BE MATCHED!
     url(r'^protocols', RedirectView.as_view(url='/cb/browser/')),
+    url("^login/$", direct_to_template, {"template": "login.html"}, name="login"),
+    url(r'^summary/(?P<project>\w+)/(?P<data_type>\w+)/$', 'hmp2.views.project_summary'),
 
     # If you'd like more granular control over the patterns in
     # ``mezzanine.urls``, go right ahead and take the parts you want
