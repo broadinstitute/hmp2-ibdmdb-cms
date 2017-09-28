@@ -17,7 +17,7 @@ body {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 72px;
+  height: 55px;
   overflow-x: hidden;
   overflow-y: hidden;
 }
