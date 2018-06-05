@@ -3,6 +3,10 @@ caption {
     color: black;
 }
 
+.caption-list {
+    font-size: 1em !important;
+}
+
 img {
     display: block;
     margin: 0 auto;

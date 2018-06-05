@@ -16,9 +16,9 @@ jQuery(document).ready(function(){
         scrollCollapse: false,
         columns: [
             {data: 'Sample'},
-            {data: 'Raw'},
-            {data: 'Trim'},
-            {data: 'hg38'},
+            {data: 'Raw', render: $.fn.dataTable.render.number( ',', '.', 0)},
+            {data: 'Trim', render: $.fn.dataTable.render.number( ',', '.', 0)},
+            {data: 'hg38', render: $.fn.dataTable.render.number( ',', '.', 0)},
         ]
     });
 
@@ -34,10 +34,10 @@ jQuery(document).ready(function(){
         scrollCollapse: false,
         columns: [
             {data: 'Sample'},
-            {data: 'Trim orphan1'},
-            {data: 'Trim orphan2'},
-            {data: 'hg38 orphan1'},
-            {data: 'hg38 orphan2'}
+            {data: 'Trim orphan1', render: $.fn.dataTable.render.number( ',', '.', 0)},
+            {data: 'Trim orphan2', render: $.fn.dataTable.render.number( ',', '.', 0)},
+            {data: 'hg38 orphan1', render: $.fn.dataTable.render.number( ',', '.', 0)},
+            {data: 'hg38 orphan2', render: $.fn.dataTable.render.number( ',', '.', 0)}
         ]
     });
 
@@ -58,14 +58,14 @@ jQuery(document).ready(function(){
         ]
     });
 
-    Plotly.d3.json('data/qc_counts_pairs_plot.json', function(err, fig) {
-        fig.layout.title = "DNA Paired-end Reads";
+    Plotly.d3.json('data/qc_counts_pairs_plot_plotly.json', function(err, fig) {
+        fig.layout.title = "Paired-end Reads";
 
         Plotly.plot('qc_filtered_reads_paired_counts_plotly', fig.data, fig.layout);
     });
 
-    Plotly.d3.json('data/qc_counts_orphans_plot.json', function(err, fig) {
-        fig.layout.title = "DNA Orphans Reads";
+    Plotly.d3.json('data/qc_counts_orphans_plot_plotly.json', function(err, fig) {
+        fig.layout.title = "Orphans Reads";
 
         Plotly.plot('qc_filtered_reads_orphan_counts_plotly', fig.data, fig.layout);
     });

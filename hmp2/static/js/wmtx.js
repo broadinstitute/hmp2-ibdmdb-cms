@@ -16,11 +16,11 @@ jQuery(document).ready(function() {
         scrollCollapse: false,
         columns: [
             {data: 'Sample'},
-            {data: 'Raw'},
-            {data: 'Trim'},
-            {data: 'hg38'},
-            {data: 'rRNA'},
-            {data: 'mRNA'}
+            {data: 'Raw', render: $.fn.dataTable.render.number( ',', '.', 0)},
+            {data: 'Trim', render: $.fn.dataTable.render.number( ',', '.', 0)},
+            {data: 'hg38', render: $.fn.dataTable.render.number( ',', '.', 0)},
+            {data: 'rRNA', render: $.fn.dataTable.render.number( ',', '.', 0)},
+            {data: 'mRNA', render: $.fn.dataTable.render.number( ',', '.', 0)}
         ]
     });
 
@@ -36,14 +36,14 @@ jQuery(document).ready(function() {
         scrollCollapse: false,
         columns: [
             {data: 'Sample'},
-            {data: 'Trim orphan1'},
-            {data: 'Trim orphan2'},
-            {data: 'hg38 orphan1'},
-            {data: 'hg38 orphan2'},
-            {data: 'rRNA orphan1'},
-            {data: 'rRNA orphan2'},
-            {data: 'mRNA orphan1'},
-            {data: 'mRNA orphan2'}
+            {data: 'Trim orphan1', render: $.fn.dataTable.render.number( ',', '.', 0)},
+            {data: 'Trim orphan2', render: $.fn.dataTable.render.number( ',', '.', 0)},
+            {data: 'hg38 orphan1', render: $.fn.dataTable.render.number( ',', '.', 0)},
+            {data: 'hg38 orphan2', render: $.fn.dataTable.render.number( ',', '.', 0)},
+            {data: 'rRNA orphan1', render: $.fn.dataTable.render.number( ',', '.', 0)},
+            {data: 'rRNA orphan2', render: $.fn.dataTable.render.number( ',', '.', 0)},
+            {data: 'mRNA orphan1', render: $.fn.dataTable.render.number( ',', '.', 0)},
+            {data: 'mRNA orphan2', render: $.fn.dataTable.render.number( ',', '.', 0)}
         ]
     });
 
