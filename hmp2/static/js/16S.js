@@ -4,12 +4,36 @@
  */
 
 jQuery(document).ready(function() {
-    Plotly.d3.json('data/top_genera_avg_abund.json', function(err, fig) {
+    var qc_read_counts_table = $('#qc_filtered_read_counts_table').DataTable({
+        ajax: {
+            url: 'data/read_counts_final.json',
+            dataSrc: ''
+        },
+        pageLength: 15,
+        searching: false,
+        deferLoading: 0,
+        lengthChange: false,
+        scrollCollapse: false,
+        columns: [
+            {data: 'SampleID'},
+            {data: 'Raw', render: $.fn.dataTable.render.number( ',', '.', 0)},
+            {data: 'Filtered', render: $.fn.dataTable.render.number( ',', '.', 0)},
+            {data: 'Mapped', render: $.fn.dataTable.render.number( ',', '.', 0)},
+            {data: 'Unmapped', render: $.fn.dataTable.render.number( ',', '.', 0)},
+        ]
+    });
+
+    Plotly.d3.json('data/read_counts_final_plotly.json', function(err, fig) {
+        fig.layout.title = ""
+        Plotly.plot('qc_filtered_16S_read_counts_plotly', fig.data, fig.layout);
+    });
+
+    Plotly.d3.json('data/top_genera_avg_abund_plotly.json', function(err, fig) {
         fig.layout.title = "Top 15 genera by average abundance";
         Plotly.plot('tax_top15_genera_avg_abund_plotly', fig.data, fig.layout);
     });
 
-    Plotly.d3.json('data/top_terminal_genera_avg_abund.json', function(err, fig) {
+    Plotly.d3.json('data/top_terminal_genera_avg_abund_plotly.json', function(err, fig) {
         fig.layout.title = "Top 15 terminal genera by average abundance";
         Plotly.plot('terminal_tax_top15_genera_avg_abund_plotly', fig.data, fig.layout);
     });
