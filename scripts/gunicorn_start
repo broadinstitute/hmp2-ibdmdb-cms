@@ -2,8 +2,8 @@
 
 NAME="hmp2"                                                   # Name of the application
 PROJECT_DIR="$( cd "$( dirname "$0" )/../../" && pwd )"       # Base project directory
-DJANGODIR="$( cd "$( dirname "$0" )/../" && pwd )"           # Django project directory
-SOCKFILE=/run/gunicorn.sock                                   # we will communicte using this unix socket
+DJANGODIR="$( cd "$( dirname "$0" )/../" && pwd )"            # Django project directory
+SOCKFILE=${PROJECT_DIR}/var/run/gunicorn.sock                 # we will communicte using this unix socket
 USER=ibdmdb                                                   # the user to run as
 GROUP=broad                                                   # the group to run as
 NUM_WORKERS=2                                                 # how many worker processes should Gunicorn spawn
@@ -32,4 +32,5 @@ exec ../bin/gunicorn ${DJANGO_WSGI_MODULE}:application \
   --user=$USER --group=$GROUP \
   --bind=unix:$SOCKFILE \
   --log-level=debug \
-  --log-file=/var/log/ibdmdb-cms.gunicorn.log
+  --log-file=${PROJECT_DIR}/var/log/ibdmdb-cms.gunicorn.log \
+  --daemon

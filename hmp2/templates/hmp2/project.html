@@ -1,0 +1,922 @@
+{% extends "hmp2/homepage-base.html" %}
+{% block meta_title %}Team{% endblock %}
+{% load i18n %}
+
+
+<body id="body">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="/">IBDMDB</a>
+
+
+            </div>
+            <div class="navbar-collapse collapse">
+
+                <form action="/search/" class="navbar-form navbar-right" role="search">
+
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Search" type="text" name="q" value="">
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <select class="form-control" name="type">
+                            <option value="">Everything</option>
+
+                            <option value="blog.BlogPost">
+                                Blog posts
+                            </option>
+
+                            <option value="pages.Page">
+                                Pages
+                            </option>
+
+                        </select>
+                    </div>
+
+
+
+                    <input type="submit" class="btn btn-default" value="Go">
+
+                </form>
+
+
+                <ul class="nav navbar-nav">
+                    <li id="dropdown-menu-home">
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="
+               " id="-results">
+                        <a href="/results">
+                            Download Data
+
+                        </a>
+                    </li>
+                    <li class="
+               " id="-cb-browser">
+                        <a href="/cb/browser">
+                            Protocols
+
+                        </a>
+                    </li>
+                    <li class="
+               active" id="project">
+                        <a href="/project/">
+                            Team
+
+                        </a>
+                    </li>
+                    <li class="
+               " id="-participant">
+                        <a href="/participant">
+                            Participant Interface
+
+                        </a>
+                    </li>
+                    <li class="
+               " id="-support">
+                        <a href="/support">
+                            Support
+
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+
+
+
+
+        <h1>
+
+
+
+            <form style="display:none;" class="editable-form" method="post" action="/edit/" id="cb522eb9-f51f-4f2e-9648-bf83136b5d4f">
+                <input type='hidden' name='csrfmiddlewaretoken' value='x457M5dBO6Q3pjK8iF3cPzI4Gc9jBKRP' />
+
+                <p>
+                    <label for="title-cb522eb9-f51f-4f2e-9648-bf83136b5d4f">Title:</label>
+                    <br />
+                    <input class=" charfield" id="title-cb522eb9-f51f-4f2e-9648-bf83136b5d4f" maxlength="500" name="title"
+                        type="text" value="Team" />
+
+                </p>
+
+                <p style="display:none;">
+                    <label for="app-cb522eb9-f51f-4f2e-9648-bf83136b5d4f">App:</label>
+                    <br />
+                    <input class=" charfield" id="app-cb522eb9-f51f-4f2e-9648-bf83136b5d4f" name="app" type="hidden" value="pages"
+                    />
+
+                </p>
+
+                <p style="display:none;">
+                    <label for="model-cb522eb9-f51f-4f2e-9648-bf83136b5d4f">Model:</label>
+                    <br />
+                    <input class=" charfield" id="model-cb522eb9-f51f-4f2e-9648-bf83136b5d4f" name="model" type="hidden"
+                        value="page" />
+
+                </p>
+
+                <p style="display:none;">
+                    <label for="id-cb522eb9-f51f-4f2e-9648-bf83136b5d4f">Id:</label>
+                    <br />
+                    <input class=" charfield" id="id-cb522eb9-f51f-4f2e-9648-bf83136b5d4f" name="id" type="hidden" value="2"
+                    />
+
+                </p>
+
+                <p style="display:none;">
+                    <label for="fields-cb522eb9-f51f-4f2e-9648-bf83136b5d4f">Fields:</label>
+                    <br />
+                    <input class=" charfield" id="fields-cb522eb9-f51f-4f2e-9648-bf83136b5d4f" name="fields" type="hidden"
+                        value="title" />
+
+                </p>
+
+                <input type="submit" value="Save" class="btn btn-primary btn-lg">
+                <input type="button" value="Cancel" class="btn btn-default btn-lg">
+            </form>
+
+
+            <div class="editable-original">Team</div>
+
+
+            <a style="visibility:hidden;" class="editable-link" href="#" rel="#cb522eb9-f51f-4f2e-9648-bf83136b5d4f">Edit</a>
+
+
+            <div style="visibility:hidden;" class="editable-highlight"></div>
+
+        </h1>
+
+        <ul class="breadcrumb">
+            <li id="breadcrumb-menu-home">
+                <a href="/">Home</a>
+            </li>
+            <li id="breadcrumb-menu-project" class="active">Team</li>
+        </ul>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-2 left">
+
+                <div class="panel panel-default tree">
+
+
+                </div>
+
+            </div>
+
+            <div class="col-md-7 middle">
+
+
+
+
+
+
+                <form style="display:none;" class="editable-form" method="post" action="/edit/" id="f6d2e10a-af0b-4fb7-a4cd-ff6ec32b55f4">
+                    <input type='hidden' name='csrfmiddlewaretoken' value='x457M5dBO6Q3pjK8iF3cPzI4Gc9jBKRP' />
+
+                    <p>
+                        <label for="content-f6d2e10a-af0b-4fb7-a4cd-ff6ec32b55f4">Content:</label>
+                        <br />
+                        <textarea class="mceEditor charfield" cols="40" id="content-f6d2e10a-af0b-4fb7-a4cd-ff6ec32b55f4"
+                            name="content" rows="10">
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;page-header&quot;&gt;
+&lt;h1&gt;The IBDMDB Team&lt;/h1&gt;
+&lt;/div&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;This project will leverage two sets of existing cohort infrastructures, the first to generate new multi’omic data in an experimental design targeted to a deep understanding of IBD, and the second to rapidly build our data sharing interface around one of the only extant pilot multi’omic profiles of IBD. First, our three Sample Generation components (PRISM, RISK, and MLI) are led by consortium members from the CCFA to collect new microbiome samples. These will profile new-onset and established pediatric and adult IBD using a uniform protocol and an experimental design specific to deep longitudinal multi’omic data generation. Second, a fourth Data Generation component will take advantage of a pair of additional cohorts (two Swedish cohorts) from which one of the only existing multi’omic datasets has been generated in IBD, allowing us to populate and pilot our bioinformatic infrastructure in parallel to generation of a complete, feature-rich multi’omic data resource.&lt;/p&gt;
+&lt;div&gt;&lt;img alt=&quot;Cohort diagram&quot; height=&quot;402&quot; src=&quot;/static/media/uploads/Images/cohorts.png&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; width=&quot;565&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;h3&gt;Principal Investigators&lt;/h3&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Curtis Huttenhower&lt;/h4&gt;
+&lt;/div&gt;
+&lt;a href=&quot;http://huttenhower.sph.harvard.edu/&quot;&gt;&lt;img alt=&quot;Curtis Huttenhower&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/huttenhower.jpg&quot; title=&quot;Curtis Huttenhower&quot; width=&quot;100&quot;&gt; &lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Ramnik Xavier&lt;/h4&gt;
+&lt;/div&gt;
+&lt;a href=&quot;http://www.massgeneral.org/research/researchlab.aspx?id=1096&quot;&gt;&lt;img alt=&quot;Ramnik Xavier&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/xavier.jpg&quot; title=&quot;Ramnik Xavier&quot; width=&quot;100&quot;&gt; &lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;h3&gt;Clinical Team&lt;/h3&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Jon Braun&lt;/h4&gt;
+&lt;/div&gt;
+&lt;a href=&quot;http://www.pathnet.medsch.ucla.edu/research/lab_webs/braun/contact.php&quot;&gt;&lt;img alt=&quot;Jon Braun&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/braun.jpg&quot; title=&quot;Jon Braun&quot; width=&quot;100&quot;&gt; &lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Ted Denson&lt;/h4&gt;
+&lt;/div&gt;
+&lt;a href=&quot;http://www.cincinnatichildrens.org/bio/d/lee-denson/&quot;&gt;&lt;img alt=&quot;Ted Denson&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/denson.jpg&quot; title=&quot;Ted Denson&quot; width=&quot;100&quot;&gt; &lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Subra Kugathasan&lt;/h4&gt;
+&lt;/div&gt;
+&lt;a href=&quot;http://genetics.emory.edu/faculty/faculty.php?facultyid=1663&quot;&gt;&lt;img alt=&quot;Subra Kugathasan&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/kugathasan.jpg&quot; title=&quot;Subra Kugathasan&quot; width=&quot;100&quot;&gt; &lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Dermot McGovern&lt;/h4&gt;
+&lt;/div&gt;
+&lt;a href=&quot;https://www.cedars-sinai.edu/Research/Faculty-Directory/Bios/Dermot-McGovern-MD-PhD.aspx&quot;&gt;&lt;img alt=&quot;Dermot McGovern&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/mcgovern.jpg&quot; title=&quot;Dermot McGovern&quot; width=&quot;100&quot;&gt; &lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Elizabeth Andrews&lt;/h4&gt;
+&lt;/div&gt;
+&lt;img alt=&quot;Elizabeth Andrews&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/andrews.jpg&quot; title=&quot;Elizabeth Andrews&quot; width=&quot;100&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Tiffany Poon&lt;/h4&gt;
+&lt;/div&gt;
+&lt;img alt=&quot;Tiffany Poon&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/poon.jpg&quot; title=&quot;Tiffany Poon&quot; width=&quot;100&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;h3&gt;Assays and &#39;Omics&lt;/h3&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Hera Vlamakis&lt;/h4&gt;
+&lt;/div&gt;
+&lt;a href=&quot;https://ccib.mgh.harvard.edu/xavier&quot;&gt;&lt;img alt=&quot;Hera Vlamakis&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/vlamakis.jpg&quot; title=&quot;Hera Vlamakis&quot; width=&quot;100&quot;&gt; &lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Chad Nusbaum&lt;/h4&gt;
+&lt;/div&gt;
+&lt;a href=&quot;http://www.broadinstitute.org/scientific-community/science/programs/genome-sequencing-and-analysis/genome-sequencing-and-analysis-&quot;&gt;&lt;img alt=&quot;Chad Nusbaum&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/nusbaum.jpg&quot; title=&quot;Chad Nusbaum&quot; width=&quot;100&quot;&gt; &lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Clary Clish&lt;/h4&gt;
+&lt;/div&gt;
+&lt;a href=&quot;http://www.broadinstitute.org/scientific-community/science/platforms/metabolite-profiling-platform/clary-clish&quot;&gt;&lt;img alt=&quot;Clary Clish&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/clish.png&quot; title=&quot;Clary Clish&quot; width=&quot;100&quot;&gt; &lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Thad Stappenbeck&lt;/h4&gt;
+&lt;/div&gt;
+&lt;a href=&quot;http://dbbs.wustl.edu/faculty/Pages/faculty_bio.aspx?SID=5853&quot;&gt;&lt;img alt=&quot;Thad Stappenbeck&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/stappenbeck.jpg&quot; title=&quot;Thad Stappenbeck&quot; width=&quot;100&quot;&gt; &lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Joe Petrosino&lt;/h4&gt;
+&lt;/div&gt;
+&lt;a href=&quot;https://www.bcm.edu/departments/molecular-virology-and-microbiology/?pmid=15214&quot;&gt;&lt;img alt=&quot;Joe Petrosino&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/petrosino.jpg&quot; title=&quot;Joe Petrosino&quot; width=&quot;100&quot;&gt; &lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Richard Allen White III&lt;/h4&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://scholar.google.com/citations?user=FKURoi8AAAAJ&amp;amp;hl=en&quot;&gt;&lt;img alt=&quot;Richard Allen White III&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/rwhite.jpg&quot; title=&quot;Richard Allen White III&quot; width=&quot;100&quot;&gt; &lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;h3&gt;Data and Informatics&lt;/h3&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Rob Knight&lt;/h4&gt;
+&lt;/div&gt;
+&lt;a href=&quot;https://knightlab.ucsd.edu/&quot;&gt;&lt;img alt=&quot;Rob Knight&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/knight.jpg&quot; title=&quot;Rob Knight&quot; width=&quot;100&quot;&gt; &lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Janet Jansson&lt;/h4&gt;
+&lt;/div&gt;
+&lt;a href=&quot;http://pmb.berkeley.edu/profile/jjansson&quot;&gt;&lt;img alt=&quot;Janet Jansson&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/jansson.jpg&quot; title=&quot;Janet Jansson&quot; width=&quot;100&quot;&gt; &lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;h3&gt;Research Team&lt;/h3&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Alexandra Sirota-Madi&lt;/h4&gt;
+&lt;/div&gt;
+&lt;img alt=&quot;Alexandra Sirota-Madi&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/sirota-madi.png&quot; title=&quot;Alexandra Sirota-Madi&quot; width=&quot;100&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Melanie Schirmer&lt;/h4&gt;
+&lt;/div&gt;
+&lt;img alt=&quot;Melanie Schirmer&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/schirmer.jpg&quot; title=&quot;Melanie Schirmer&quot; width=&quot;100&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Randall Schwager&lt;/h4&gt;
+&lt;/div&gt;
+&lt;img alt=&quot;Randall Schwager&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/schwager.jpg&quot; title=&quot;Randall Schwager&quot; width=&quot;100&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Eric Franzosa&lt;/h4&gt;
+&lt;/div&gt;
+&lt;img alt=&quot;Eric Franzosa&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/franzosa.jpg&quot; title=&quot;Eric Franzosa&quot; width=&quot;100&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Antonio Gonzàlez Peña&lt;/h4&gt;
+&lt;/div&gt;
+&lt;img alt=&quot;Antonio Gonzalez Pena&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/pena.jpg&quot; title=&quot;Antonio Gonzalez Pena&quot; width=&quot;100&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Yoshiki Vazquez Baeza&lt;/h4&gt;
+&lt;/div&gt;
+&lt;img alt=&quot;Yoshiki Vazquez Baeza&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/baeza.jpg&quot; title=&quot;Yoshiki Vazquez Baeza&quot; width=&quot;100&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Colin Brislawn&lt;/h4&gt;
+&lt;/div&gt;
+&lt;img alt=&quot;Colin Brislawn&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/brislawn.jpg&quot; title=&quot;Colin Brislawn&quot; width=&quot;100&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Julian Avila-Pacheco&lt;/h4&gt;
+&lt;/div&gt;
+&lt;h4&gt;&lt;img alt=&quot;Julian Avila-Pacheco&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/julian-avila.jpeg&quot; title=&quot;Julian Avila-Pacheco&quot; width=&quot;100&quot;&gt;&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Cesar Arze&lt;/h4&gt;
+&lt;/div&gt;
+&lt;h4&gt;&lt;img alt=&quot;Cesar Arze&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/arze.png&quot; width=&quot;100&quot;&gt;&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-xs-6 col-sm-4 &quot; style=&quot;display: inline;&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Jason Lloyd-Price&lt;/h4&gt;
+&lt;/div&gt;
+&lt;h4&gt;&lt;img alt=&quot;Jason Lloyd-Price&quot; height=&quot;146&quot; src=&quot;/static/media/uploads/mugs2/lloydprice.png&quot; width=&quot;100&quot;&gt;&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;h2&gt;The Cohorts&lt;/h2&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h3&gt;Massachusetts General Hospital&lt;/h3&gt;
+&lt;div class=&quot;span4&quot;&gt;
+&lt;dl class=&quot;dl-horizontal&quot;&gt;
+&lt;dt&gt;Title&lt;/dt&gt;
+&lt;dd&gt;PRISM:The Prospective Registry in IBD Study&lt;/dd&gt;
+&lt;dt&gt;Site PIs&lt;/dt&gt;
+&lt;dd&gt;Ramnik Xavier MD PhD; Jenny Sauk MD&lt;/dd&gt;
+&lt;dt&gt;Project Coordinators&lt;/dt&gt;
+&lt;dd&gt;Holly Sturgeon MPH, CCRC; Robin Wilson&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span8&quot; style=&quot;float: right;&quot;&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;The Prospective Registry in IBD Study at MGH (PRISM) is a referral center-based, prospective cohort of IBD patients initiated in 2005 with ongoing recruitment enrolling patients from within the physician practices at the Crohn&#39;s and Colitis Center at Massachusetts General Hospital. The goal of PRISM is to establish a well-phenotyped cohort of patients with inflammatory bowel disease with corresponding biologic samples including blood, stool and biopsies to help identify potential biomarkers that can predict a patient&#39;s response to drugs and toxicity, to accurately define disease activity, and to predict future relapse and prognosis. To date, there are 1,983 patients over the age of 18 enrolled with a diagnosis of UC, CD, or indeterminate colitis in PRISM. Blood samples are collected at entry; stool and biopsies are obtained upon further consent from the patient. From this cohort, we will recruit 24 adult subjects with newly-diagnosed, treatment-naive IBD and 6 age-matched healthy controls.&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- end row --&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;h3&gt;Cincinnati Children’s Hospital and Emory University&lt;/h3&gt;
+&lt;div class=&quot;span4&quot;&gt;
+&lt;dl class=&quot;dl-horizontal&quot;&gt;
+&lt;dt&gt;Title&lt;/dt&gt;
+&lt;dd&gt;The Pediatric Inception Cohort&lt;/dd&gt;
+&lt;dt&gt;Site PI&lt;/dt&gt;
+&lt;dd&gt;Lee (Ted) A. Denson MD&lt;/dd&gt;
+&lt;dt&gt;Project Coordinators&lt;/dt&gt;
+&lt;dd&gt;Katie Lake MSW, CCRC; Mahadev Prasad&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span8&quot; style=&quot;float: right;&quot;&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;The Pediatric Inception Cohort emerges from the CCFA-sponsored RISK study, which started in 2009 involving 28 pediatric centers and completed recruitment in 2013. When a child is suspected to have IBD and about to get a colonoscopic examination, the family is approached and enrolled prior to therapy. To date, roughly 1,130 CD, 139 UC, 129 IBDU, and 380 non-IBD subjects have been recruited to RISK. The biosampling pipeline is well-established at Emory University and Cincinnati Children’s Hospital as a result of their involvement in RISK allowing for streamlined recruitment and collection of repeated samples. From this cohort, we will recruit 24 pediatric subjects with newly-diagnosed, treatment-naive IBD and 6 age-matched healthy controls.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- end row --&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;h3&gt;Cedars-Sinai Medical Center&lt;/h3&gt;
+&lt;div class=&quot;span4&quot;&gt;
+&lt;dl class=&quot;dl-horizontal&quot;&gt;
+&lt;dt&gt;Title&lt;/dt&gt;
+&lt;dd&gt;The Mucosal-Luminal Interface (MLI) Cohort&lt;/dd&gt;
+&lt;dt&gt;Site PIs&lt;/dt&gt;
+&lt;dd&gt;Dermot McGovern MD PhD; Jonathan Braun MD PhD&lt;/dd&gt;
+&lt;dt&gt;Project Coordinator&lt;/dt&gt;
+&lt;dd&gt;Michelle Li PhD&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span8&quot; style=&quot;float: right;&quot;&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;This cohort has been formed to test the hypothesis that colonic microbiota of the mucosal-luminal interface (MLI) form a mosaic of functional communities, organized by interactive microbial and host products and resultant microbial composition started in 2007. Centered at the Cedars-Sinai (C-S) IBD Center, patients undergoing clinically-indicated endoscopy are recruited to fulfill normal and IBD cohorts with full genomic, serology and clinical phenotyping. Endoscopic lavage is used to sample the MLI at 2 segments, and additional biospecimens (stool, biopsy, serum, urine, saliva) are available. Over 180 patients and 300 samples have been collected to date with well-established biosampling protocols and clinical coordinators in place to recruit and collect repeat samples throughout the course of the year. From this cohort, we will recruit 24 adult patients with established IBD diagnosed greater than 5 years from the time of enrollment and 6 age-matched healthy controls.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- end row --&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;h3&gt;The Swedish Twins&lt;/h3&gt;
+&lt;div class=&quot;span4&quot;&gt;
+&lt;dl class=&quot;dl-horizontal&quot;&gt;
+&lt;dt&gt;Title&lt;/dt&gt;
+&lt;dd&gt;Longitudinal cohort studies of inflammatory bowel disease&lt;/dd&gt;
+&lt;dt&gt;Site PI&lt;/dt&gt;
+&lt;dd&gt;Janet Jansson&lt;/dd&gt;
+&lt;dt&gt;Project Coordinators&lt;/dt&gt;
+&lt;dd&gt;Neslihan Tas&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span8&quot; style=&quot;float: right;&quot;&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Existing multi’omic data from two Swedish studies, the Swedish Twin and Swedish Longitudinal cohorts, will be used by the IBDMDB as a ready-made “proof-of-principle” dataset around which we will organize and prototype our computational infrastructure in parallel with primary data generation. For the Swedish Twin IBD cohort, twin pairs of the same sex, 18 years or older were identified and a questionnaire was sent to all twins including questions about diagnosis of IBD and general gastrointestinal symptoms. Zygosity was determined using the method applied by the Swedish twin registry, relying on childhood resemblance.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;The Swedish Longitudinal study includes representation of both genders (56 males and 63 females). The subjects provided fecal samples at 3-month intervals for a maximum of 10 points. Women (but no children) were included in the study group, but not if they were pregnant or breastfeeding. The disease phenotype and extent was determined using the same criteria as described above for the Swedish twin cohort. Additional data collected from each study include year of diagnosis, close relatives with IBD, smoking status, primary sclerosing cholangitis, clinical status at diagnosis, perianala fistules, maximal spread, date of colonoscopy, resection, calprotectin levels, antibiotic usage (12mos), NSAID usage (12mos), gastroenteritis (3mos), abdominal pain, bowel movements, diarrhea, blood or mucus in stool, and prescribed treatments.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- end row --&gt;&lt;/div&gt;</textarea>
+
+                    </p>
+
+                    <p style="display:none;">
+                        <label for="app-f6d2e10a-af0b-4fb7-a4cd-ff6ec32b55f4">App:</label>
+                        <br />
+                        <input class=" charfield" id="app-f6d2e10a-af0b-4fb7-a4cd-ff6ec32b55f4" name="app" type="hidden"
+                            value="pages" />
+
+                    </p>
+
+                    <p style="display:none;">
+                        <label for="model-f6d2e10a-af0b-4fb7-a4cd-ff6ec32b55f4">Model:</label>
+                        <br />
+                        <input class=" charfield" id="model-f6d2e10a-af0b-4fb7-a4cd-ff6ec32b55f4" name="model" type="hidden"
+                            value="richtextpage" />
+
+                    </p>
+
+                    <p style="display:none;">
+                        <label for="id-f6d2e10a-af0b-4fb7-a4cd-ff6ec32b55f4">Id:</label>
+                        <br />
+                        <input class=" charfield" id="id-f6d2e10a-af0b-4fb7-a4cd-ff6ec32b55f4" name="id" type="hidden" value="2"
+                        />
+
+                    </p>
+
+                    <p style="display:none;">
+                        <label for="fields-f6d2e10a-af0b-4fb7-a4cd-ff6ec32b55f4">Fields:</label>
+                        <br />
+                        <input class=" charfield" id="fields-f6d2e10a-af0b-4fb7-a4cd-ff6ec32b55f4" name="fields" type="hidden"
+                            value="content" />
+
+                    </p>
+
+                    <input type="submit" value="Save" class="btn btn-primary btn-lg">
+                    <input type="button" value="Cancel" class="btn btn-default btn-lg">
+                </form>
+
+
+                <div class="editable-original">
+                    <div class="row">
+                        <div class="page-header">
+                            <h1>The IBDMDB Team</h1>
+                        </div>
+                        <p style="text-align: justify;">This project will leverage two sets of existing cohort infrastructures, the first to generate new
+                            multi’omic data in an experimental design targeted to a deep understanding of IBD, and the second
+                            to rapidly build our data sharing interface around one of the only extant pilot multi’omic profiles
+                            of IBD. First, our three Sample Generation components (PRISM, RISK, and MLI) are led by consortium
+                            members from the CCFA to collect new microbiome samples. These will profile new-onset and established
+                            pediatric and adult IBD using a uniform protocol and an experimental design specific to deep
+                            longitudinal multi’omic data generation. Second, a fourth Data Generation component will take
+                            advantage of a pair of additional cohorts (two Swedish cohorts) from which one of the only existing
+                            multi’omic datasets has been generated in IBD, allowing us to populate and pilot our bioinformatic
+                            infrastructure in parallel to generation of a complete, feature-rich multi’omic data resource.</p>
+                        <div>
+                            <img alt="Cohort diagram" height="402" src="/static/media/uploads/Images/cohorts.png" style="display: block; margin-left: auto; margin-right: auto;"
+                                width="565" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h3>Principal Investigators</h3>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Curtis Huttenhower</h4>
+                            </div>
+                            <a href="http://huttenhower.sph.harvard.edu/">
+                                <img alt="Curtis Huttenhower" height="146" src="/static/media/uploads/mugs2/huttenhower.jpg"
+                                    title="Curtis Huttenhower" width="100" /> </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Ramnik Xavier</h4>
+                            </div>
+                            <a href="http://www.massgeneral.org/research/researchlab.aspx?id=1096">
+                                <img alt="Ramnik Xavier" height="146" src="/static/media/uploads/mugs2/xavier.jpg" title="Ramnik Xavier"
+                                    width="100" /> </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h3>Clinical Team</h3>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Jon Braun</h4>
+                            </div>
+                            <a href="http://www.pathnet.medsch.ucla.edu/research/lab_webs/braun/contact.php">
+                                <img alt="Jon Braun" height="146" src="/static/media/uploads/mugs2/braun.jpg" title="Jon Braun"
+                                    width="100" /> </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Ted Denson</h4>
+                            </div>
+                            <a href="http://www.cincinnatichildrens.org/bio/d/lee-denson/">
+                                <img alt="Ted Denson" height="146" src="/static/media/uploads/mugs2/denson.jpg" title="Ted Denson"
+                                    width="100" /> </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Subra Kugathasan</h4>
+                            </div>
+                            <a href="http://genetics.emory.edu/faculty/faculty.php?facultyid=1663">
+                                <img alt="Subra Kugathasan" height="146" src="/static/media/uploads/mugs2/kugathasan.jpg" title="Subra Kugathasan"
+                                    width="100" /> </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Dermot McGovern</h4>
+                            </div>
+                            <a href="https://www.cedars-sinai.edu/Research/Faculty-Directory/Bios/Dermot-McGovern-MD-PhD.aspx">
+                                <img alt="Dermot McGovern" height="146" src="/static/media/uploads/mugs2/mcgovern.jpg" title="Dermot McGovern"
+                                    width="100" /> </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Elizabeth Andrews</h4>
+                            </div>
+                            <img alt="Elizabeth Andrews" height="146" src="/static/media/uploads/mugs2/andrews.jpg" title="Elizabeth Andrews" width="100"
+                            />
+                        </div>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Tiffany Poon</h4>
+                            </div>
+                            <img alt="Tiffany Poon" height="146" src="/static/media/uploads/mugs2/poon.jpg" title="Tiffany Poon" width="100" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h3>Assays and 'Omics</h3>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Hera Vlamakis</h4>
+                            </div>
+                            <a href="https://ccib.mgh.harvard.edu/xavier">
+                                <img alt="Hera Vlamakis" height="146" src="/static/media/uploads/mugs2/vlamakis.jpg" title="Hera Vlamakis"
+                                    width="100" /> </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Chad Nusbaum</h4>
+                            </div>
+                            <a href="http://www.broadinstitute.org/scientific-community/science/programs/genome-sequencing-and-analysis/genome-sequencing-and-analysis-">
+                                <img alt="Chad Nusbaum" height="146" src="/static/media/uploads/mugs2/nusbaum.jpg" title="Chad Nusbaum"
+                                    width="100" /> </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Clary Clish</h4>
+                            </div>
+                            <a href="http://www.broadinstitute.org/scientific-community/science/platforms/metabolite-profiling-platform/clary-clish">
+                                <img alt="Clary Clish" height="146" src="/static/media/uploads/mugs2/clish.png" title="Clary Clish"
+                                    width="100" /> </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Thad Stappenbeck</h4>
+                            </div>
+                            <a href="http://dbbs.wustl.edu/faculty/Pages/faculty_bio.aspx?SID=5853">
+                                <img alt="Thad Stappenbeck" height="146" src="/static/media/uploads/mugs2/stappenbeck.jpg" title="Thad Stappenbeck"
+                                    width="100" /> </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Joe Petrosino</h4>
+                            </div>
+                            <a href="https://www.bcm.edu/departments/molecular-virology-and-microbiology/?pmid=15214">
+                                <img alt="Joe Petrosino" height="146" src="/static/media/uploads/mugs2/petrosino.jpg" title="Joe Petrosino"
+                                    width="100" /> </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Richard Allen White III</h4>
+                            </div>
+                            <p>
+                                <a href="https://scholar.google.com/citations?user=FKURoi8AAAAJ&amp;hl=en">
+                                    <img alt="Richard Allen White III" height="146" src="/static/media/uploads/mugs2/rwhite.jpg"
+                                        title="Richard Allen White III" width="100" /> </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h3>Data and Informatics</h3>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Rob Knight</h4>
+                            </div>
+                            <a href="https://knightlab.ucsd.edu/">
+                                <img alt="Rob Knight" height="146" src="/static/media/uploads/mugs2/knight.jpg" title="Rob Knight"
+                                    width="100" /> </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Janet Jansson</h4>
+                            </div>
+                            <a href="http://pmb.berkeley.edu/profile/jjansson">
+                                <img alt="Janet Jansson" height="146" src="/static/media/uploads/mugs2/jansson.jpg" title="Janet Jansson"
+                                    width="100" /> </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h3>Research Team</h3>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Alexandra Sirota-Madi</h4>
+                            </div>
+                            <img alt="Alexandra Sirota-Madi" height="146" src="/static/media/uploads/mugs2/sirota-madi.png" title="Alexandra Sirota-Madi"
+                                width="100" />
+                        </div>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Melanie Schirmer</h4>
+                            </div>
+                            <img alt="Melanie Schirmer" height="146" src="/static/media/uploads/mugs2/schirmer.jpg" title="Melanie Schirmer" width="100"
+                            />
+                        </div>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Randall Schwager</h4>
+                            </div>
+                            <img alt="Randall Schwager" height="146" src="/static/media/uploads/mugs2/schwager.jpg" title="Randall Schwager" width="100"
+                            />
+                        </div>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Eric Franzosa</h4>
+                            </div>
+                            <img alt="Eric Franzosa" height="146" src="/static/media/uploads/mugs2/franzosa.jpg" title="Eric Franzosa" width="100" />
+                        </div>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Antonio Gonzàlez Peña</h4>
+                            </div>
+                            <img alt="Antonio Gonzalez Pena" height="146" src="/static/media/uploads/mugs2/pena.jpg" title="Antonio Gonzalez Pena" width="100"
+                            />
+                        </div>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Yoshiki Vazquez Baeza</h4>
+                            </div>
+                            <img alt="Yoshiki Vazquez Baeza" height="146" src="/static/media/uploads/mugs2/baeza.jpg" title="Yoshiki Vazquez Baeza" width="100"
+                            />
+                        </div>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Colin Brislawn</h4>
+                            </div>
+                            <img alt="Colin Brislawn" height="146" src="/static/media/uploads/mugs2/brislawn.jpg" title="Colin Brislawn" width="100"
+                            />
+                        </div>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Julian Avila-Pacheco</h4>
+                            </div>
+                            <h4>
+                                <img alt="Julian Avila-Pacheco" height="146" src="/static/media/uploads/mugs2/julian-avila.jpeg"
+                                    title="Julian Avila-Pacheco" width="100" />
+                            </h4>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Cesar Arze</h4>
+                            </div>
+                            <h4>
+                                <img alt="Cesar Arze" height="146" src="/static/media/uploads/mugs2/arze.png" width="100" />
+                            </h4>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 " style="display: inline;">
+                            <div>
+                                <h4>Jason Lloyd-Price</h4>
+                            </div>
+                            <h4>
+                                <img alt="Jason Lloyd-Price" height="146" src="/static/media/uploads/mugs2/lloydprice.png" width="100"
+                                />
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h2>The Cohorts</h2>
+                        <p></p>
+                        <h3>Massachusetts General Hospital</h3>
+                        <div class="span4">
+                            <dl class="dl-horizontal">
+                                <dt>Title</dt>
+                                <dd>PRISM:The Prospective Registry in IBD Study</dd>
+                                <dt>Site PIs</dt>
+                                <dd>Ramnik Xavier MD PhD; Jenny Sauk MD</dd>
+                                <dt>Project Coordinators</dt>
+                                <dd>Holly Sturgeon MPH, CCRC; Robin Wilson</dd>
+                            </dl>
+                        </div>
+                        <div class="span8" style="float: right;">
+                            <p style="text-align: justify;">The Prospective Registry in IBD Study at MGH (PRISM) is a referral center-based, prospective
+                                cohort of IBD patients initiated in 2005 with ongoing recruitment enrolling patients from
+                                within the physician practices at the Crohn's and Colitis Center at Massachusetts General
+                                Hospital. The goal of PRISM is to establish a well-phenotyped cohort of patients with inflammatory
+                                bowel disease with corresponding biologic samples including blood, stool and biopsies to
+                                help identify potential biomarkers that can predict a patient's response to drugs and toxicity,
+                                to accurately define disease activity, and to predict future relapse and prognosis. To date,
+                                there are 1,983 patients over the age of 18 enrolled with a diagnosis of UC, CD, or indeterminate
+                                colitis in PRISM. Blood samples are collected at entry; stool and biopsies are obtained upon
+                                further consent from the patient. From this cohort, we will recruit 24 adult subjects with
+                                newly-diagnosed, treatment-naive IBD and 6 age-matched healthy controls.</p>
+                        </div>
+                        <!-- end row -->
+                        <div class="row">
+                            <h3>Cincinnati Children’s Hospital and Emory University</h3>
+                            <div class="span4">
+                                <dl class="dl-horizontal">
+                                    <dt>Title</dt>
+                                    <dd>The Pediatric Inception Cohort</dd>
+                                    <dt>Site PI</dt>
+                                    <dd>Lee (Ted) A. Denson MD</dd>
+                                    <dt>Project Coordinators</dt>
+                                    <dd>Katie Lake MSW, CCRC; Mahadev Prasad</dd>
+                                </dl>
+                            </div>
+                            <div class="span8" style="float: right;">
+                                <p style="text-align: justify;">The Pediatric Inception Cohort emerges from the CCFA-sponsored RISK study, which started
+                                    in 2009 involving 28 pediatric centers and completed recruitment in 2013. When a child
+                                    is suspected to have IBD and about to get a colonoscopic examination, the family is approached
+                                    and enrolled prior to therapy. To date, roughly 1,130 CD, 139 UC, 129 IBDU, and 380 non-IBD
+                                    subjects have been recruited to RISK. The biosampling pipeline is well-established at
+                                    Emory University and Cincinnati Children’s Hospital as a result of their involvement
+                                    in RISK allowing for streamlined recruitment and collection of repeated samples. From
+                                    this cohort, we will recruit 24 pediatric subjects with newly-diagnosed, treatment-naive
+                                    IBD and 6 age-matched healthy controls.</p>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                        <div class="row">
+                            <h3>Cedars-Sinai Medical Center</h3>
+                            <div class="span4">
+                                <dl class="dl-horizontal">
+                                    <dt>Title</dt>
+                                    <dd>The Mucosal-Luminal Interface (MLI) Cohort</dd>
+                                    <dt>Site PIs</dt>
+                                    <dd>Dermot McGovern MD PhD; Jonathan Braun MD PhD</dd>
+                                    <dt>Project Coordinator</dt>
+                                    <dd>Michelle Li PhD</dd>
+                                </dl>
+                            </div>
+                            <div class="span8" style="float: right;">
+                                <p style="text-align: justify;">This cohort has been formed to test the hypothesis that colonic microbiota of the mucosal-luminal
+                                    interface (MLI) form a mosaic of functional communities, organized by interactive microbial
+                                    and host products and resultant microbial composition started in 2007. Centered at the
+                                    Cedars-Sinai (C-S) IBD Center, patients undergoing clinically-indicated endoscopy are
+                                    recruited to fulfill normal and IBD cohorts with full genomic, serology and clinical
+                                    phenotyping. Endoscopic lavage is used to sample the MLI at 2 segments, and additional
+                                    biospecimens (stool, biopsy, serum, urine, saliva) are available. Over 180 patients and
+                                    300 samples have been collected to date with well-established biosampling protocols and
+                                    clinical coordinators in place to recruit and collect repeat samples throughout the course
+                                    of the year. From this cohort, we will recruit 24 adult patients with established IBD
+                                    diagnosed greater than 5 years from the time of enrollment and 6 age-matched healthy
+                                    controls.</p>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                        <div class="row">
+                            <h3>The Swedish Twins</h3>
+                            <div class="span4">
+                                <dl class="dl-horizontal">
+                                    <dt>Title</dt>
+                                    <dd>Longitudinal cohort studies of inflammatory bowel disease</dd>
+                                    <dt>Site PI</dt>
+                                    <dd>Janet Jansson</dd>
+                                    <dt>Project Coordinators</dt>
+                                    <dd>Neslihan Tas</dd>
+                                </dl>
+                            </div>
+                            <div class="span8" style="float: right;">
+                                <p style="text-align: justify;">Existing multi’omic data from two Swedish studies, the Swedish Twin and Swedish Longitudinal
+                                    cohorts, will be used by the IBDMDB as a ready-made “proof-of-principle” dataset around
+                                    which we will organize and prototype our computational infrastructure in parallel with
+                                    primary data generation. For the Swedish Twin IBD cohort, twin pairs of the same sex,
+                                    18 years or older were identified and a questionnaire was sent to all twins including
+                                    questions about diagnosis of IBD and general gastrointestinal symptoms. Zygosity was
+                                    determined using the method applied by the Swedish twin registry, relying on childhood
+                                    resemblance.</p>
+                                <p style="text-align: justify;">The Swedish Longitudinal study includes representation of both genders (56 males and 63 females).
+                                    The subjects provided fecal samples at 3-month intervals for a maximum of 10 points.
+                                    Women (but no children) were included in the study group, but not if they were pregnant
+                                    or breastfeeding. The disease phenotype and extent was determined using the same criteria
+                                    as described above for the Swedish twin cohort. Additional data collected from each study
+                                    include year of diagnosis, close relatives with IBD, smoking status, primary sclerosing
+                                    cholangitis, clinical status at diagnosis, perianala fistules, maximal spread, date of
+                                    colonoscopy, resection, calprotectin levels, antibiotic usage (12mos), NSAID usage (12mos),
+                                    gastroenteritis (3mos), abdominal pain, bowel movements, diarrhea, blood or mucus in
+                                    stool, and prescribed treatments.</p>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                    </div>
+                </div>
+
+
+                <a style="visibility:hidden;" class="editable-link" href="#" rel="#f6d2e10a-af0b-4fb7-a4cd-ff6ec32b55f4">Edit</a>
+
+
+                <div style="visibility:hidden;" class="editable-highlight"></div>
+
+
+
+            </div>
+
+            <div class="col-md-3 right">
+
+
+
+
+
+
+                <div class="panel panel-default user-panel">
+                    <div class="panel-body">
+
+
+                    </div>
+                </div>
+
+
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+
+
+
+
+
+            <div class="row">
+                <p class="site-info text-center">
+                    Powered by
+                    <a href="http://mezzanine.jupo.org">Mezzanine</a>
+                    and
+                    <a href="http://www.djangoproject.com">Django</a>
+                    <span class="separator">|</span>
+                    Theme by
+                    <a target="_blank" href="http://getbootstrap.com">Bootstrap</a>
+
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="/static/mezzanine/css/editable.css">
+    <link href="/static/mezzanine/tinymce/tinymce.css" type="text/css" media="all" rel="stylesheet" />
+    <script type="text/javascript" src="/static/mezzanine/tinymce/tinymce.min.js"></script>
+    <script type="text/javascript" src="/static/mezzanine/js/tinymce_setup.js"></script>
+    <script>
+
+
+
+        window.__filebrowser_url = '/admin/media-library/browse/';
+        window.__toolbar_html = '\u000A\u000A\u003Cdiv id\u003D\u0022editable\u002Dtoolbar\u0022 method\u003D\u0022POST\u0022 action\u003D\u0022/admin/logout/\u0022\u003E\u000A    \u000A    \u000A    \u000A    \u003Ca id\u003D\u0022editable\u002Dtoolbar\u002Dtoggle\u0022 href\u003D\u0022#\u0022\u003E\u003C/a\u003E\u000A    \u003Ca href\u003D\u0022/admin/pages/page/2/change/\u0022\u003EAdmin\u003C/a\u003E\u000A    \u003Ca href\u003D\u0022/admin/logout/?next\u003D/project/\u0022\u003ELog out\u003C/a\u003E\u000A\u003C/div\u003E\u000A\u000A\u003Cimg id\u003D\u0022editable\u002Dloading\u0022 src\u003D\u0022/static/mezzanine/img/loadingAnimation.gif\u0022\u003E\u000A\u000A';
+        window.__static_proxy = '/asset_proxy/';
+        window.__language_code = 'en';
+        window.__tinymce_css = '/static/mezzanine/css/tinymce.css';
+    </script>
+    <script src="/static/mezzanine/js/jquery.tools.toolbox.expose.js"></script>
+    <script src="/static/mezzanine/js/jquery.tools.overlay.js"></script>
+    <script src="/static/mezzanine/js/jquery.form.js"></script>
+    <script src="/static/mezzanine/js/editable.js"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>
