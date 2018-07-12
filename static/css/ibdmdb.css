@@ -28,3 +28,7 @@ body {
     margin-bottom: 10px;
     border: 1px solid;
 }
+
+#metadata_timestamp {
+    padding-left: 2px;
+}
