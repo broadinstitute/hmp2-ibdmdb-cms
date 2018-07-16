@@ -91,7 +91,12 @@ jQuery(document).ready(function() {
         lengthChange: false,
         scrollCollapse: false,
         columns: [
-            {data: 'Pathway'},
+            {
+                data: 'Pathway',
+                render: function(data, type, row, meta) {
+                    return '<a href="' + get_metacyc_url(data) + '" target="_blank">' + data + '</a>';
+                }
+            },
             {data: 'Average abundance'},
             {data: 'Variance'}
         ]
